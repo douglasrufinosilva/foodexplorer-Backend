@@ -7,7 +7,6 @@ const requestsRoutes = Router();
 const requestController = new RequestController();
 
 requestsRoutes.use(ensureAuthenticated);
-
 requestsRoutes.post("/", requestController.create);
 requestsRoutes.get("/:user_id", requestController.show);
 requestsRoutes.get("/", requestController.index);

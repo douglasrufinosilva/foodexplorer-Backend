@@ -6,7 +6,6 @@ const categoryRoutes = Router();
 const categoryController = new CategoryController();
 
 categoryRoutes.use(ensureAuthenticated);
-
 categoryRoutes.post("/", categoryController.create);
 categoryRoutes.delete("/:id", categoryController.delete);
 
